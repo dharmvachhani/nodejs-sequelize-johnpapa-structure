@@ -3,7 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "migration:run": "npx sequelize-cli db:migrate",
+    "migration:undo": "npx sequelize-cli db:migrate:undo",
+    "migration:undo:all": "npx sequelize-cli db:migrate:undo:all",
+    "migration:create": "npx sequelize-cli migration:generate --name"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
